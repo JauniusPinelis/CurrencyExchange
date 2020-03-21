@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace CurrencyExchange.Tests
+namespace CurrencyExchange.Domain.Tests
 {
     public class ConvertertTests
     {

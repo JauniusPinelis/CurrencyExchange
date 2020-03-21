@@ -15,8 +15,8 @@ namespace CurrencyExchange.Console
         {
             RegisterServices();
 
-            var service = _serviceProvider.GetService<IApplication>();
-            service.DoSomething();
+            var exchangeService = _serviceProvider.GetService<IExchange>();
+            exchangeService.Exchange(args[0]);
 
             DisposeServices();
         }
@@ -25,10 +25,9 @@ namespace CurrencyExchange.Console
         private static void RegisterServices()
         {
             var collection = new ServiceCollection();
-            collection.AddScoped<IDemoService, DemoService>();
-            // ...
-            // Add other services
-            // ...
+            collection.AddScoped<IDataService, DataService>();
+            collection.AddScoped<IExchange, ExchangeApp>();
+
             _serviceProvider = collection.BuildServiceProvider();
         }
 

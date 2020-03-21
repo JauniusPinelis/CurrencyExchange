@@ -7,9 +7,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CurrencyExchange.Domain", "
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CurrencyExchange.Console", "src\CurrencyExchange.Console\CurrencyExchange.Console.csproj", "{107E81B7-91FF-4CD8-BF69-D88871FDD159}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CurrencyExchange.Tests", "Tests\CurrencyExchange.Tests\CurrencyExchange.Tests.csproj", "{607A00E6-7CB0-4741-AE5C-5D5092A4E2B9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CurrencyExchange.Domain.Tests", "Tests\CurrencyExchange.Tests\CurrencyExchange.Domain.Tests.csproj", "{607A00E6-7CB0-4741-AE5C-5D5092A4E2B9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CurrencyExchange.Application", "src\CurrencyExchange.Application\CurrencyExchange.Application.csproj", "{A8286F8F-899E-4E88-AD2E-64A2FCE5EC3C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CurrencyExchange.Application", "src\CurrencyExchange.Application\CurrencyExchange.Application.csproj", "{A8286F8F-899E-4E88-AD2E-64A2FCE5EC3C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CurrencyExchange.Application.Tests", "Tests\CurrencyExchange.Application.Tests\CurrencyExchange.Application.Tests.csproj", "{6A7B42CC-4BD5-4640-B72B-8EC17EB9875F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +35,10 @@ Global
 		{A8286F8F-899E-4E88-AD2E-64A2FCE5EC3C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A8286F8F-899E-4E88-AD2E-64A2FCE5EC3C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A8286F8F-899E-4E88-AD2E-64A2FCE5EC3C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6A7B42CC-4BD5-4640-B72B-8EC17EB9875F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6A7B42CC-4BD5-4640-B72B-8EC17EB9875F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6A7B42CC-4BD5-4640-B72B-8EC17EB9875F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6A7B42CC-4BD5-4640-B72B-8EC17EB9875F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

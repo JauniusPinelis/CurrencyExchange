@@ -3,7 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace CurrencyExchange.Tests.Data
+namespace CurrencyExchange.Domain.Tests.Data
 {
     public static class TestData
     {

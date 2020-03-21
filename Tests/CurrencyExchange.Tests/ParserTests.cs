@@ -1,12 +1,13 @@
 ﻿using CurrencyExchange.Domain;
 using CurrencyExchange.Domain.Models;
+using CurrencyExchange.Domain.Tests.Data;
 using FluentAssertions;
 using NUnit.Framework;
 using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace CurrencyExchange.Tests
+namespace CurrencyExchange.Domain.Tests
 {
 
     public class ParserTests
