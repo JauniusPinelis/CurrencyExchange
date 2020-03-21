@@ -1,4 +1,5 @@
 ﻿using CurrencyExchange.Domain;
+using CurrencyExchange.Domain.Data;
 using FluentAssertions;
 using NUnit.Framework;
 using System;
@@ -13,7 +14,10 @@ namespace CurrencyExchange.Tests
         private readonly Parser _parser;
         public ParserTests()
         {
-            _parser = new Parser();
+            var dataService = new DataService();
+            var exchangeRates = dataService.GetExchangeRates();
+
+            _parser = new Parser(exchangeRates);
         }
 
         [Test]
@@ -24,7 +28,7 @@ namespace CurrencyExchange.Tests
             var parsedConversion = _parser.ParseConversion(conversion);
 
             parsedConversion.From.Name.Should().Be("Euro");
-            parsedConversion.To.Name.Should().Be("Amerikanske Dollar");
+            parsedConversion.To.Name.Should().Be("Amerikanske dollar");
             parsedConversion.Amount.Should().Be(1);
         }
 
@@ -36,7 +40,7 @@ namespace CurrencyExchange.Tests
             var parsedConversion = _parser.ParseConversion(conversion);
 
             parsedConversion.From.Name.Should().Be("Euro");
-            parsedConversion.To.Name.Should().Be("Amerikanske Dollar");
+            parsedConversion.To.Name.Should().Be("Amerikanske dollar");
             parsedConversion.Amount.Should().Be(1999);
         }
     }
