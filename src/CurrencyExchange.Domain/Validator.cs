@@ -67,5 +67,7 @@ namespace CurrencyExchange.Domain
                 Message = ValidationResponses.Success
             };
         }
+
+       
     }
 }
