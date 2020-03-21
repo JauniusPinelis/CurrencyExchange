@@ -7,7 +7,7 @@ namespace CurrencyExchange.Console
     {
         static void Main(string[] args)
         {
-            var app = new Application();
+            
         }
     }
 }

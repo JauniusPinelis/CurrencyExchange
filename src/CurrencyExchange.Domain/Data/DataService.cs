@@ -7,7 +7,7 @@ namespace CurrencyExchange.Domain.Data
 {
     public class DataService
     {
-        public IEnumerable<Currency> GetExchangeReates()
+        public IEnumerable<Currency> GetExchangeRates()
         {
             return new List<Currency>() {
                 new Currency()
