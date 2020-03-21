@@ -26,7 +26,50 @@ namespace CurrencyExchange.Tests
 
             var message = _validator.Validate(input);
 
-            message.Successfull.Should().BeFalse();
+            message.Successful.Should().BeFalse();
+        }
+
+        [Test]
+        public void Validate_GivenNonExistingCurrency_ValidateIsNotSuccesfull()
+        {
+            var input = "EUR/LIT 2";
+
+            var message = _validator.Validate(input);
+
+            message.Successful.Should().BeFalse();
+            message.Message.Should().Be("Currency has not been found");
+        }
+
+        [Test]
+        public void Validate_GivenAmountToZero_ZeroIsReturned()
+        {
+            var input = "EUR/SEK 0";
+
+            var message = _validator.Validate(input);
+
+            message.Successful.Should().BeFalse();
+            message.Message.Should().Be("Currency has not been found");
+        }
+
+        [Test]
+        public void Validate_NoSeparatorInCurrency_WrongFormat()
+        {
+            var input = "EURSEK 4";
+
+            var message = _validator.Validate(input);
+
+            message.Successful.Should().BeFalse();
+            message.Message.Should().Be("Incorrect format");
+        }
+
+        public void Validate_OkFormat_Success()
+        {
+            var input = "EUR/SEK 4";
+
+            var message = _validator.Validate(input);
+
+            message.Successful.Should().BeTrue();
+            message.Message.Should().Be("Success");
         }
     }
 }

@@ -6,7 +6,7 @@ namespace CurrencyExchange.Domain.Models
 {
     public class ValidationMessage
     {
-        public bool Successfull { get; set; }
+        public bool Successful { get; set; }
         public string Message { get; set; }
     }
 }

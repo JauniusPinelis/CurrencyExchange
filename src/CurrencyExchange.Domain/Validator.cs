@@ -20,14 +20,14 @@ namespace CurrencyExchange.Domain
             {
                 return new ValidationMessage()
                 {
-                    Successfull = false,
+                    Successful = false,
                     Message = "Incorrect format"
                 };
             }
 
             return new ValidationMessage()
             {
-                Successfull = true,
+                Successful = true,
                 Message = "Success"
             };
         }
