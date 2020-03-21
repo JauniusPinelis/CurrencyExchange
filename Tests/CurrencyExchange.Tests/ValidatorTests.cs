@@ -1,5 +1,6 @@
 using CurrencyExchange.Domain;
 using CurrencyExchange.Domain.Data;
+using CurrencyExchange.Domain.Enums;
 using FluentAssertions;
 using NUnit.Framework;
 
@@ -37,7 +38,7 @@ namespace CurrencyExchange.Tests
             var message = _validator.Validate(input);
 
             message.Successful.Should().BeFalse();
-            message.Message.Should().Be("Currency has not been found");
+            message.Message.Should().Be(ValidationResponses.CurrencyNotFound);
         }
 
         [Test]
@@ -48,7 +49,7 @@ namespace CurrencyExchange.Tests
             var message = _validator.Validate(input);
 
             message.Successful.Should().BeFalse();
-            message.Message.Should().Be("Incorrect format");
+            message.Message.Should().Be(ValidationResponses.IncorrectFormat);
         }
 
         [Test]
@@ -59,7 +60,7 @@ namespace CurrencyExchange.Tests
             var message = _validator.Validate(input);
 
             message.Successful.Should().BeFalse();
-            message.Message.Should().Be("Incorrect format");
+            message.Message.Should().Be(ValidationResponses.IncorrectFormat);
         }
 
         [Test]
@@ -70,7 +71,7 @@ namespace CurrencyExchange.Tests
             var message = _validator.Validate(input);
 
             message.Successful.Should().BeTrue();
-            message.Message.Should().Be("Success");
+            message.Message.Should().Be(ValidationResponses.Success);
         }
     }
 }
