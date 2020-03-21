@@ -1,6 +1,7 @@
 ﻿using CurrencyExchange.Domain.Models;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
 
 namespace CurrencyExchange.Domain.Data
@@ -31,7 +32,7 @@ namespace CurrencyExchange.Domain.Data
                  new Currency()
             {
                 Name = "Svenske kroner",
-                Iso = " SEK",
+                Iso = "SEK",
                 ExchangeRate= 76.10M
             }, new Currency()
             {
