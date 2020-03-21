@@ -15,7 +15,21 @@ namespace CurrencyExchange.Domain
 
         public ValidationMessage Validate(string input)
         {
-            throw new NotImplementedException();
+            string[] components = input.Split(' ');
+            if (components.Length != 2)
+            {
+                return new ValidationMessage()
+                {
+                    Successfull = false,
+                    Message = "Incorrect format"
+                };
+            }
+
+            return new ValidationMessage()
+            {
+                Successfull = true,
+                Message = "Success"
+            };
         }
     }
 }
