@@ -4,9 +4,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace CurrencyExchange.Domain.Data
+namespace CurrencyExchange.Application.Data
 {
-    public class DataService
+    public class DataService : IDataService
     {
         public IEnumerable<Currency> GetExchangeRates()
         {

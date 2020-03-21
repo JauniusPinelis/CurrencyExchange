@@ -1,5 +1,5 @@
 ﻿using CurrencyExchange.Domain;
-using CurrencyExchange.Domain.Data;
+using CurrencyExchange.Domain.Models;
 using FluentAssertions;
 using NUnit.Framework;
 using System;
@@ -14,8 +14,7 @@ namespace CurrencyExchange.Tests
         private readonly Parser _parser;
         public ParserTests()
         {
-            var dataService = new DataService();
-            var exchangeRates = dataService.GetExchangeRates();
+            var exchangeRates = TestData.GetExchangeRates();
 
             _parser = new Parser(exchangeRates);
         }

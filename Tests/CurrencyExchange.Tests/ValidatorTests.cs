@@ -1,6 +1,6 @@
 using CurrencyExchange.Domain;
-using CurrencyExchange.Domain.Data;
 using CurrencyExchange.Domain.Enums;
+using CurrencyExchange.Tests.Data;
 using FluentAssertions;
 using NUnit.Framework;
 
@@ -9,12 +9,11 @@ namespace CurrencyExchange.Tests
     public class ValidatorTests
     {
         private Validator _validator;
-        private DataService _dataService;
 
         public ValidatorTests()
         {
-            _dataService = new DataService();
-            var exchangeRates = _dataService.GetExchangeRates();
+           
+            var exchangeRates = TestData.GetExchangeRates();
 
             _validator = new Validator(exchangeRates);
         }
