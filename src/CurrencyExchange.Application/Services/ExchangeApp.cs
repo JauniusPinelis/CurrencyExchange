@@ -1,6 +1,7 @@
 ﻿using CurrencyExchange.Application.Application;
 using CurrencyExchange.Application.Data;
 using CurrencyExchange.Domain;
+using CurrencyExchange.Domain.Enums;
 using System;
 
 namespace CurrencyExchange.Application
@@ -31,7 +32,7 @@ namespace CurrencyExchange.Application
             }
             else
             {
-                return validation.Message.ToString();
+                return validation.Message.GetDescription();
             }
         }
     }

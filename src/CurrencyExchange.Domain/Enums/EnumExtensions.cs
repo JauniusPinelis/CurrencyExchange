@@ -7,7 +7,7 @@ namespace CurrencyExchange.Domain.Enums
 {
     public static class MyEnumExtensions
     {
-        public static string ToString(this ValidationResponses val)
+        public static string GetDescription(this ValidationResponses val)
         {
             DescriptionAttribute[] attributes = (DescriptionAttribute[])val
                .GetType()
