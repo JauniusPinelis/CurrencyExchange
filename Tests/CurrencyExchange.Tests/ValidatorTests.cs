@@ -4,7 +4,7 @@ using CurrencyExchange.Domain.Tests.Data;
 using FluentAssertions;
 using NUnit.Framework;
 
-namespace CurrencyExchange.Tests
+namespace CurrencyExchange.Domain.Tests
 {
     public class ValidatorTests
     {
