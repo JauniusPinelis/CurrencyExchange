@@ -6,8 +6,7 @@ using System.Text;
 namespace CurrencyExchange.Domain
 {
     public class Calculator
-    {
-        
+    {        
         public decimal Calculate(Conversion conversion)
         {
             return conversion.Amount * (conversion.From.Amount / 100)

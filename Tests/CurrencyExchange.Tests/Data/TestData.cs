@@ -14,7 +14,7 @@ namespace CurrencyExchange.Domain.Tests.Data
             {
                 Name = "Danish Kroner",
                 Iso = "DKK",
-                Amount= 743.94M
+                Amount= 100M
             },
                 new Currency()
             {
