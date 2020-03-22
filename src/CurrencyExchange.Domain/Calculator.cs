@@ -7,13 +7,7 @@ namespace CurrencyExchange.Domain
 {
     public class Calculator
     {
-        private readonly IEnumerable<Currency> _currencies;
-
-        public Calculator(IEnumerable<Currency> currencies)
-        {
-            _currencies = currencies;
-        }
-
+        [Test]
         public decimal Calculate(Conversion conversion)
         {
             throw new NotImplementedException();
