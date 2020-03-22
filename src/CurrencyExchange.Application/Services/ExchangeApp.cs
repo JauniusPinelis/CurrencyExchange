@@ -7,23 +7,32 @@ namespace CurrencyExchange.Application
 {
     public class ExchangeApp : IExchange
     {
-
         private readonly Validator _validator;
         private readonly Parser _parser;
+        private readonly Calculator _calculator;
     
-
         public ExchangeApp(IDataService dataService)
         {
-            var exchangeRates =  dataService.GetCurrencyData(); 
+            var currencies =  dataService.GetCurrencyData(); 
 
-            _validator = new Validator(exchangeRates);
-            _parser = new Parser(exchangeRates);
-           
+            _validator = new Validator(currencies);
+            _parser = new Parser(currencies);
+            _calculator = new Calculator();
         }
 
         public string Exchange(string[] input)
         {
-            throw new NotImplementedException();
+            var validation = _validator.Validate(input);
+
+            if (validation.Successful)
+            {
+                var conversion = _parser.ParseConversion(input);
+                return _calculator.Calculate(conversion).ToString();
+            }
+            else
+            {
+                return validation.Message.ToString();
+            }
         }
     }
 }

@@ -26,7 +26,7 @@ namespace CurrencyExchange.Application.Tests
 
             var output = _exchangeApplication.Exchange(input);
 
-            output.Should().Be("7.4394");
+            output.Should().Be("7,4394");
         }
     }
 }
