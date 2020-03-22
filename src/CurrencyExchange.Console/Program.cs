@@ -16,7 +16,8 @@ namespace CurrencyExchange.Console
             RegisterServices();
 
             var exchangeService = _serviceProvider.GetService<IExchange>();
-            exchangeService.Exchange(args);
+
+            System.Console.WriteLine(exchangeService.Exchange(args));
 
             DisposeServices();
         }
