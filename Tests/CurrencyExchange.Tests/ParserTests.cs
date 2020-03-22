@@ -23,9 +23,9 @@ namespace CurrencyExchange.Domain.Tests
         [Test]
         public void ParseConversion_GivenCorrectSyntax_ShouldParseSuccesfully()
         {
-            string conversion = "EUR/USD 1";
+            var input = new string[2] { "EUR/USD", "1" };
 
-            var parsedConversion = _parser.ParseConversion(conversion);
+            var parsedConversion = _parser.ParseConversion(input);
 
             parsedConversion.From.Name.Should().Be("Euro");
             parsedConversion.To.Name.Should().Be("Amerikanske dollar");
@@ -35,9 +35,9 @@ namespace CurrencyExchange.Domain.Tests
         [Test]
         public void ParseConversion_GivenAmountInSeveralSpaces_ShouldParseSuccesfully()
         {
-            string conversion = "EUR/USD 1999";
+            var input = new string[2] { "EUR/USD", "1999" };
 
-            var parsedConversion = _parser.ParseConversion(conversion);
+            var parsedConversion = _parser.ParseConversion(input);
 
             parsedConversion.From.Name.Should().Be("Euro");
             parsedConversion.To.Name.Should().Be("Amerikanske dollar");

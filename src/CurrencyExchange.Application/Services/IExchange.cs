@@ -6,6 +6,6 @@ namespace CurrencyExchange.Application.Application
 {
     public interface IExchange
     {
-        string Exchange(string input);
+        string Exchange(string[] input);
     }
 }

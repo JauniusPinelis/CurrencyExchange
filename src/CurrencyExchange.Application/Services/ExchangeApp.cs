@@ -21,7 +21,7 @@ namespace CurrencyExchange.Application
            
         }
 
-        public string Exchange(string input)
+        public string Exchange(string[] input)
         {
             throw new NotImplementedException();
         }

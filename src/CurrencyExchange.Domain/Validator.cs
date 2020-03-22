@@ -16,11 +16,9 @@ namespace CurrencyExchange.Domain
             
         }
 
-        public ValidationMessage Validate(string input)
+        public ValidationMessage Validate(string[] input)
         {
-
-            string[] components = input.Split(' ');
-            if (components.Length != 2)
+            if (input.Length != 2)
             {
                 return new ValidationMessage()
                 {
@@ -29,7 +27,7 @@ namespace CurrencyExchange.Domain
                 };
             }
 
-            var currencyCodes = components[0].Split('/');
+            var currencyCodes = input[0].Split('/');
 
             if (currencyCodes.Length != 2)
             {
@@ -40,7 +38,7 @@ namespace CurrencyExchange.Domain
                 };
             }
 
-            if (!int.TryParse(components[1], out _))
+            if (!int.TryParse(input[1], out _))
             {
                 return new ValidationMessage()
                 {
