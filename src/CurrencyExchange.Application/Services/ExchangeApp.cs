@@ -7,7 +7,6 @@ namespace CurrencyExchange.Application
 {
     public class ExchangeApp : IExchange
     {
-        private readonly IDataService _dataService;
 
         private readonly Validator _validator;
         private readonly Parser _parser;
@@ -15,7 +14,7 @@ namespace CurrencyExchange.Application
 
         public ExchangeApp(IDataService dataService)
         {
-            var exchangeRates = _dataService.GetCurrencyData();
+            var exchangeRates =  dataService.GetCurrencyData(); 
 
             _validator = new Validator(exchangeRates);
             _parser = new Parser(exchangeRates);

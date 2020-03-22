@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "CurrencyExchange.Console": {
+      "commandName": "Project",
+      "commandLineArgs": "EUR/DKK 1"
+    }
+  }
+}

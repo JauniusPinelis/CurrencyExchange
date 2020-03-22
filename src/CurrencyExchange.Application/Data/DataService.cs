@@ -15,7 +15,7 @@ namespace CurrencyExchange.Application.Data
             {
                 Name = "Danish Kroner",
                 Iso = "DKK",
-                Amount= 743.94M
+                Amount= 100
             },
                 new Currency()
             {

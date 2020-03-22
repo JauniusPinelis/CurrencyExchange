@@ -6,7 +6,7 @@ using System;
 
 namespace CurrencyExchange.Console
 {
-    class Program
+    public class Program
     {
         private static IServiceProvider _serviceProvider;
 
