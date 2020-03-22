@@ -15,9 +15,9 @@ namespace CurrencyExchange.Domain.Tests
         private readonly Parser _parser;
         public ParserTests()
         {
-            var exchangeRates = TestData.GetExchangeRates();
+            var currencyData = TestData.GetCurrencyData();
 
-            _parser = new Parser(exchangeRates);
+            _parser = new Parser(currencyData);
         }
 
         [Test]

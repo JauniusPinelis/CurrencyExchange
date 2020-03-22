@@ -7,6 +7,6 @@ namespace CurrencyExchange.Application.Data
 {
     public interface IDataService
     {
-        IEnumerable<Currency> GetExchangeRates();
+        IEnumerable<Currency> GetCurrencyData();
     }
 }

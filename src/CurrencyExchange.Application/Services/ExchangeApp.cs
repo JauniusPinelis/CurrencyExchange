@@ -15,7 +15,7 @@ namespace CurrencyExchange.Application
 
         public ExchangeApp(IDataService dataService)
         {
-            var exchangeRates = _dataService.GetExchangeRates();
+            var exchangeRates = _dataService.GetCurrencyData();
 
             _validator = new Validator(exchangeRates);
             _parser = new Parser(exchangeRates);

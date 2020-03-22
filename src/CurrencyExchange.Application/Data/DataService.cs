@@ -8,49 +8,55 @@ namespace CurrencyExchange.Application.Data
 {
     public class DataService : IDataService
     {
-        public IEnumerable<Currency> GetExchangeRates()
+        public IEnumerable<Currency> GetCurrencyData()
         {
             return new List<Currency>() {
+                 new Currency()
+            {
+                Name = "Danish Kroner",
+                Iso = "DKK",
+                Amount= 743.94M
+            },
                 new Currency()
             {
                 Name = "Euro",
                 Iso = "EUR",
-                ExchangeRate= 743.94M
+                Amount= 743.94M
             },
                 new Currency()
             {
                 Name = "Amerikanske dollar",
                 Iso = "USD",
-                ExchangeRate= 663.11M
+                Amount= 663.11M
             },
                 new Currency()
             {
                 Name = "Britiske pund",
                 Iso = "GBP",
-                ExchangeRate= 852.85M
+                Amount= 852.85M
             },
                  new Currency()
             {
                 Name = "Svenske kroner",
                 Iso = "SEK",
-                ExchangeRate= 76.10M
+                Amount= 76.10M
             }, new Currency()
             {
                 Name = "Norske kroner",
                 Iso = "NOK",
-                ExchangeRate= 78.40M
+                Amount= 78.40M
             },
                  new Currency()
             {
                 Name = "Schweiziske franc",
                 Iso = "CHF",
-                ExchangeRate= 683.68M
+                Amount= 683.68M
             },
                  new Currency()
             {
                 Name = "Japanske yen",
                 Iso = "JPY",
-                ExchangeRate= 5.9740M
+                Amount= 5.9740M
             }};
         }
     }

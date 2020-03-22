@@ -13,6 +13,10 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CurrencyExchange.Applicatio
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CurrencyExchange.Application.Tests", "Tests\CurrencyExchange.Application.Tests\CurrencyExchange.Application.Tests.csproj", "{6A7B42CC-4BD5-4640-B72B-8EC17EB9875F}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{D5EEBAC6-24F1-441E-9960-5F98D0CBA2C3}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{8AE44C8A-06BE-4A46-932C-B9C204E09E3C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -42,6 +46,13 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{D996C51B-CDD9-479C-B40D-7193A6E697EC} = {D5EEBAC6-24F1-441E-9960-5F98D0CBA2C3}
+		{107E81B7-91FF-4CD8-BF69-D88871FDD159} = {D5EEBAC6-24F1-441E-9960-5F98D0CBA2C3}
+		{607A00E6-7CB0-4741-AE5C-5D5092A4E2B9} = {8AE44C8A-06BE-4A46-932C-B9C204E09E3C}
+		{A8286F8F-899E-4E88-AD2E-64A2FCE5EC3C} = {D5EEBAC6-24F1-441E-9960-5F98D0CBA2C3}
+		{6A7B42CC-4BD5-4640-B72B-8EC17EB9875F} = {8AE44C8A-06BE-4A46-932C-B9C204E09E3C}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {139C92FA-417C-44D5-B4B5-F36558F2BC81}

@@ -8,11 +8,11 @@ namespace CurrencyExchange.Domain
 {
     public class Validator
     {
-        private readonly IEnumerable<Currency> _exchangeRates;
+        private readonly IEnumerable<Currency> _currencies;
 
-        public Validator(IEnumerable<Currency> exchangeRates)
+        public Validator(IEnumerable<Currency> currencies)
         {
-            _exchangeRates = exchangeRates;
+            _currencies = currencies;
             
         }
 
@@ -51,7 +51,7 @@ namespace CurrencyExchange.Domain
 
             foreach (var currencyCode in currencyCodes)
             {
-                if (!_exchangeRates.Select(c => c.Iso).Contains(currencyCode))
+                if (!_currencies.Select(c => c.Iso).Contains(currencyCode))
                 {
                     return new ValidationMessage()
                     {

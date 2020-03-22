@@ -13,9 +13,9 @@ namespace CurrencyExchange.Tests
         public ValidatorTests()
         {
            
-            var exchangeRates = TestData.GetExchangeRates();
+            var currencies = TestData.GetCurrencyData();
 
-            _validator = new Validator(exchangeRates);
+            _validator = new Validator(currencies);
         }
 
        
@@ -66,6 +66,17 @@ namespace CurrencyExchange.Tests
         public void Validate_OkFormat_Success()
         {
             var input = "EUR/SEK 4";
+
+            var message = _validator.Validate(input);
+
+            message.Successful.Should().BeTrue();
+            message.Message.Should().Be(ValidationResponses.Success);
+        }
+
+        [Test]
+        public void Validate_DkkAdded_DanishKronerGetsRecognised()
+        {
+            var input = "DKK/SEK 43";
 
             var message = _validator.Validate(input);
 

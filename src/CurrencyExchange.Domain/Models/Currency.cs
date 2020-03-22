@@ -9,6 +9,6 @@ namespace CurrencyExchange.Domain.Models
         public string Name { get; set; }
         public string Iso { get; set; }
 
-        public decimal ExchangeRate { get; set; }
+        public decimal Amount { get; set; }
     }
 }
