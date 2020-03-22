@@ -1,6 +1,6 @@
 using CurrencyExchange.Domain;
 using CurrencyExchange.Domain.Enums;
-using CurrencyExchange.Domain.Tests.Data;
+using CurrencyExchange.Tests.Shared.Data;
 using FluentAssertions;
 using NUnit.Framework;
 

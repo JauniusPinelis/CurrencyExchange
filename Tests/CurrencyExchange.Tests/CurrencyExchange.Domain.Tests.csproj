@@ -15,6 +15,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\..\src\CurrencyExchange.Domain\CurrencyExchange.Domain.csproj" />
+    <ProjectReference Include="..\CurrencyExchange.Tests.Shared\CurrencyExchange.Tests.Shared.csproj" />
   </ItemGroup>
 
 </Project>
